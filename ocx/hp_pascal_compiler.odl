@@ -1,0 +1,89 @@
+// HP PASCAL Compiler.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (HP PASCAL Compiler.tlb) that will become a resource in
+// HP PASCAL Compiler.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(6DDE27BB-BEDA-11D3-91D8-525400EA8C8F), version(1.0),
+  helpfile("HP PASCAL Compiler.hlp"),
+  helpstring("HP PASCAL Compiler ActiveX Control module"),
+  control ]
+library HPPASCALCOMPILERLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CHPPASCALCompilerCtrl
+
+	[ uuid(6DDE27BC-BEDA-11D3-91D8-525400EA8C8F),
+	  helpstring("Dispatch interface for HPPASCALCompiler Control"), hidden ]
+	dispinterface _DHPPASCALCompiler
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CHPPASCALCompilerCtrl)
+			[id(1)] BSTR ErreurFichier;
+			[id(2)] boolean Erreur;
+			[id(3)] long ErreurAbscisse;
+			[id(4)] long ErreurOrdonnee;
+			[id(5)] BSTR FileSource;
+			[id(6)] BSTR ErreurMessage;
+			[id(7)] BSTR FileDestination;
+			[id(8)] BSTR DirectorySource;
+			[id(9)] BSTR DirectoryUnit;
+			[id(10)] BSTR DirectoryResource;
+			[id(11)] BSTR DirectoryDestination;
+			[id(12)] long MemoryBITMAP;
+			[id(13)] long MemorySTACK;
+			[id(14)] long MemoryRPL;
+			[id(15)] BSTR EtapeMessage;
+			[id(16)] BSTR EtapeFichier;
+			[id(17)] long EtapeJauge;
+			[id(18)] long Version;
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CHPPASCALCompilerCtrl)
+			[id(19)] boolean Compile();
+			[id(20)] boolean CheckSyntax();
+			//}}AFX_ODL_METHOD
+	};
+
+	//  Event dispatch interface for CHPPASCALCompilerCtrl
+
+	[ uuid(6DDE27BD-BEDA-11D3-91D8-525400EA8C8F),
+	  helpstring("Event interface for HPPASCALCompiler Control") ]
+	dispinterface _DHPPASCALCompilerEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CHPPASCALCompilerCtrl)
+			[id(1)] void Evenement();
+			[id(2)] void Fini();
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CHPPASCALCompilerCtrl
+
+	[ uuid(6DDE27A6-BEDA-11D3-91D8-525400EA8C8F),
+	  helpstring("HPPASCALCompiler Control"), control ]
+	coclass HPPASCALCompiler
+	{
+		[default] dispinterface _DHPPASCALCompiler;
+		[default, source] dispinterface _DHPPASCALCompilerEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
