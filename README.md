@@ -13,11 +13,11 @@ OCX compiler component used by HP Pascal Studio
 <br>
 
 > [!NOTE]  
-> The HP48 compiler is the project of one man, be indulgent if you notice some bugs.
-> Many thanks for contributors of the HP49/50 version (Nemo)
+> The HP48 compiler is a one-person project, so please be indulgent if you notice any bugs.
+> Many thanks to the contributors of the HP49/50 version
 
 > [!TIP]
-> Please go to the official website in order to get all files needed to compile HP Pascal Studio, the OCX component is just the compiler core
+> Please visit the official site to download all the files required to compile HP Pascal Studio; the OCX component is only the core compiler.
 
 <br>
 
